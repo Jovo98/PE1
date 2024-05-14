@@ -1,5 +1,4 @@
-
-const apiUrl = "https://v2.api.noroff.dev/blog/posts/jo_tan_vo"
+const apiURL = "https://v2.api.noroff.dev/blog/posts/jo_tan_vo"
 // Function to make a POST request
 function makePostRequest() {
     fetch("https://v2.api.noroff.dev/blog/posts/jo_tan_vo", {
@@ -50,11 +49,8 @@ function makeLoginRequest() {
         .then((result) => console.log(result));
 }
 
-fetch(apiUrl)
+fetch(apiURL)
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
         return response.json();
     })
     .then(data => {
