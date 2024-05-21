@@ -1,17 +1,4 @@
-.descriptionTitle {
-    font-size: 2rem;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 1rem;
-}
-
-input {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+h1 {
+    margin: auto;
+    font-size: 1rem;
 }

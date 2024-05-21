@@ -1,76 +1,43 @@
 const form = {
-    title: document.querySelector("#title"),
-    body: document.querySelector("#body"),
-    tags: document.querySelector("#tags"),
-    postID: document.querySelector("#postID")
+    username: document.querySelector("#username"),
+    email: document.querySelector("#email"),
+    password: document.querySelector("#password"),
 };
-
 const button = document.querySelector("#button");
-const accessToken = localStorage.getItem('accessToken');
+button.addEventListener("click", makeRegisterRequest);
 
-function makePostRequest() {
-    // Validation checks
-    if (!form.title.value || !form.body.value || !form.tags.value) {
+function makeRegisterRequest() {
+    if (!form.username.value || !form.email.value || !form.password.value) {
         alert("Please fill in all fields");
         return;
     }
 
-    fetch("https://v2.api.noroff.dev/blog/posts/jo_tan_vo", {
+    fetch("https://v2.api.noroff.dev/auth/register", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${accessToken}`,
+            "Content-type": "application/json; charset=UTF-8",
         },
         body: JSON.stringify({
-            title: form.title.value,
-            body: form.body.value,
-            tags: [form.tags.value],
+            name: form.username.value,
+            email: form.email.value,
+            password: form.password.value,
         }),
     })
-        .then((response) => {
+        .then(response => {
             if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
+                return response.json().then(errorData => {
+                    throw new Error(errorData.message);
+                });
             }
             return response.json();
         })
-        .then((result) => {
-            console.log(result);
-            alert("Successfully created new post!");
+        .then(results => {
+            console.log(results);
+            alert("Registration successful!");
         })
-        .catch((error) => {
-            console.error('Fetch error:', error);
-            alert("There was a problem with your request: " + error.message);
-        });
-}
-
-button.addEventListener("click", (e) => {
-    e.preventDefault();
-    makePostRequest();
-});
-
-
-function deletePost(id) {
-    const deleteUrl = `https://v2.api.noroff.dev/blog/posts/jo_tan_vo/${id}`;
-
-    fetch(deleteUrl, {
-        method: "DELETE",
-        headers: {
-            "Authorization": `Bearer ${accessToken}`,
-        },
-    })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then((result) => {
-            console.log(result);
-            alert("Post deleted successfully!");
-        })
-        .catch((error) => {
-            console.error('Fetch error:', error);
-            alert("There was a problem with your request: " + error.message);
+        .catch(error => {
+            console.error("Error:", error);
+            alert(`Error: ${error.message}`);
         });
 }
 
