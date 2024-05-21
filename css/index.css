@@ -1,0 +1,7 @@
+.linkButtons {
+    display: flex;
+    flex-direction: row;
+}
+.linkButtons a {
+    margin-left: 1rem;
+}

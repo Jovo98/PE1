@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/make.css" type="text/css">
+    <title>Create Post</title>
+    <script src="../js/make.js" defer></script>
+
 </head>
 <body>
+<header>
+    <div>
+        <a href="post_index.html">
+        <button>HOME</button>
+        </a>
+        <a href="edit.html">
+            <button>EDIT POSTS</button>
+        </a>
+    </div>
 
+
+
+
+</header>
+<main>
+    <section id="createPost">
+       <p class="descriptionTitle"> Create a new Post</p>
+    <form id="postForm" method="post">
+
+        <div class="container">
+            <label for="title"><b>Title</b></label>
+            <input id="title"  type="text" placeholder="Enter Title" name="title" >
+
+            <label for="body"><b>Body</b></label>
+            <input id="body"  type="text" placeholder="Enter description" name="body" >
+
+            <label for="tags"><b>Tags</b></label>
+            <input id="tags"  type="text" placeholder="Enter tags" name="tags" >
+            
+            <label for="image"><b>image</b></label>
+            <input id="image"  type="text" placeholder="Upload image" name="image">
+            <label for="alt"><b>alt</b></label>
+            <input id="alt"  type="text" placeholder="Image description" name="alt">
+
+            <button id="button" type="submit">
+                Create Post
+            </button>
+
+        </div>
+
+    </form>
+    </section>
+
+
+
+</main>
+<footer>
+
+</footer>
 </body>
 </html>

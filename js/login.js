@@ -40,7 +40,7 @@ const button = document.querySelector("#button")
             } else {
                 if (data.data.accessToken) {
                     localStorage.setItem('accessToken', data.data.accessToken);
-                    window.location.href = "register.html";
+                    window.location.href = "../post/post_index.html";
                 } else {
                     console.error("no data")
                 }

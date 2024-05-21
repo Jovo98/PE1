@@ -63,6 +63,7 @@ fetch(apiURL)
                     <p>${post.body}</p>
                     <p>Post ID: ${post.id}</p>
                     <p>Author: ${post.author.name}</p>
+                    ${post.media && post.media.url ? `<img src="${post.media.url}" alt="${post.media.alt || 'Image'}" style="display:block; width:100%; max-width:300px;" >` : ''}
                     <hr>
                 `;
                 blogsContainer.appendChild(postElement);
