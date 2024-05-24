@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog post public page</title>
     <link rel="stylesheet" href="../css/index.css" type="text/css">
-    <script src="../js/app.js" defer></script>
+    <script src="../js/postindex.js" defer></script>
 </head>
 <body>
 <header>
-    <div> <a href="../index.html"> BACK TO HOME </a></div>
 
     <div class="linkButtons">
     <a href="make.html">Create New Posts</a>
@@ -21,7 +20,12 @@
 </header>
 <main>
 
-    <div id="blogs">
+    <div id="carousel" class="carousel"></div>
+    <div class="carouselNav">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <div id="blogs" class="thumbnailGrid">
 
     </div>
 </main>

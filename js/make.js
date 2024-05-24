@@ -11,10 +11,20 @@ const button = document.querySelector("#button");
 const accessToken = localStorage.getItem('accessToken');
 
 function makePostRequest() {
-    // Validation checks
     if (!form.title.value) {
         alert("The post requires a title!");
         return;
+    }
+    const postBody = {
+        title: form.title.value,
+        body: form.body.value,
+        tags: [form.tags.value]
+    };
+    if (form.image.value) {
+        postBody.media = {
+            url: form.image.value,
+            alt: form.imageAlt.value
+        };
     }
 
     fetch("https://v2.api.noroff.dev/blog/posts/jo_tan_vo", {
@@ -23,15 +33,7 @@ function makePostRequest() {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${accessToken}`,
         },
-        body: JSON.stringify({
-            title: form.title.value,
-            body: form.body.value,
-            tags: [form.tags.value],
-            media: {
-                url: form.image.value,
-                alt: form.imageAlt.value
-            }
-        }),
+        body: JSON.stringify(postBody),
     })
         .then((response) => {
             if (!response.ok) {
@@ -45,7 +47,7 @@ function makePostRequest() {
         })
         .catch((error) => {
             console.error('Fetch error:', error);
-            alert("accessToken not valid, please log in");
+            alert("Image not valid");
         });
 }
 
@@ -53,7 +55,6 @@ button.addEventListener("click", (e) => {
     e.preventDefault();
     makePostRequest();
 });
-
 
 
 
