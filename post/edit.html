@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit page</title>
+    <script src="../js/edit.js" defer></script>
 </head>
 <header>
     <a href="post_index.html"><button>Home</button></a>
@@ -13,13 +14,41 @@
     <form id="deleteForm" method="post">
 
         <div class="container">
-            <label for="postID"><b>Title</b></label>
+            <label for="deleteID"><b>Post ID</b></label>
+            <input id="deleteID"  type="text" placeholder="Enter Post ID" name="deleteID" >
+
+
+
+            <button id="button" type="submit">
+                Delete Post
+            </button>
+
+        </div>
+
+    </form>
+    <p class="descriptionTitle"> Edit a post</p>
+    <form id="putForm" method="post">
+
+        <div class="container">
+            <label for="postID"><b>Post ID</b></label>
             <input id="postID"  type="text" placeholder="Enter Post ID" name="postID" >
 
+            <label for="title"><b>Title</b></label>
+            <input id="title"  type="text" placeholder="Enter Title" name="title" >
 
+            <label for="body"><b>Body</b></label>
+            <input id="body"  type="text" placeholder="Enter description" name="body" >
+
+            <label for="tags"><b>Tags</b></label>
+            <input id="tags"  type="text" placeholder="Enter tags" name="tags" >
+
+            <label for="image"><b>image</b></label>
+            <input id="image"  type="text" placeholder="Upload image" name="image">
+            <label for="alt"><b>alt</b></label>
+            <input id="alt"  type="text" placeholder="Image description" name="alt">
 
             <button id="button2" type="submit">
-                Delete Post
+                Update Post
             </button>
 
         </div>
