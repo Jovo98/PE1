@@ -78,7 +78,7 @@ function editPutRequest() {
         })
         .then((result) => {
             console.log(result);
-            alert("Successfully created new post!");
+            alert("Successfully edited post!");
         })
 }
 

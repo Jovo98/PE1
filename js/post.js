@@ -16,6 +16,7 @@ fetch(apiUrl)
                     <p>${post.body}</p>
                     <p>Author: ${post.author.name}</p>
                     ${post.media && post.media.url ? `<img src="${post.media.url}" alt="${post.media.alt || 'Image'}">` : ''}
+                    <p>Post ID: ${post.id}</p>
                 `;
             } else {
                 document.getElementById('post').innerHTML = '<p>Post not found.</p>';

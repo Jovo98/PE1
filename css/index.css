@@ -1,3 +1,31 @@
+* {
+    box-sizing: border-box;
+
+}
+header {
+    background-color: #c0a886;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+
+main {
+    margin-top: 5rem;
+}
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #d8ccb4;
+}
+
+.welcome {
+    text-align: center;
+
+}
+
 .linkButtons {
     display: flex;
     flex-direction: row;
@@ -8,7 +36,7 @@
 
 .carousel {
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #8A724F;
     display: flex;
     overflow: hidden;
     width: 100%;
@@ -41,7 +69,7 @@
 }
 .thumbnail {
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #8A724F;
     padding: 10px;
     text-align: center;
 }
