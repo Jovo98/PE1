@@ -20,6 +20,10 @@
     min-width: 100%;
     transition: transform 0.5s ease;
 }
+.carouselItem img {
+    margin-right: auto;
+    margin-left: auto;
+}
 .carouselNav {
     text-align: center;
     margin-top: 10px;
@@ -47,5 +51,6 @@
 }
 
 .readMore {
+    margin: 1rem;
     cursor: pointer;
 }
