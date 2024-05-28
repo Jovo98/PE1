@@ -4,13 +4,22 @@ const form = {
     password: document.querySelector("#password"),
 };
 const button = document.querySelector("#button");
-button.addEventListener("click", makeRegisterRequest);
+button.addEventListener("click", (e) => {
+    e.preventDefault(); makeRegisterRequest();
+});
 
 function makeRegisterRequest() {
     if (!form.username.value || !form.email.value || !form.password.value) {
         alert("Please fill in all fields");
         return;
     }
+
+    console.log("Attempting to make request to:", "https://v2.api.noroff.dev/auth/register");
+    console.log("Request body:", {
+        name: form.username.value,
+        email: form.email.value,
+        password: form.password.value,
+    });
 
     fetch("https://v2.api.noroff.dev/auth/register", {
         method: "POST",
@@ -34,11 +43,8 @@ function makeRegisterRequest() {
         .then(results => {
             console.log(results);
             alert("Registration successful!");
+            window.location.href = "../account/login.html";
         })
-        .catch(error => {
-            console.error("Error:", error);
-            alert(`Error: ${error.message}`);
-        });
 }
 
 
