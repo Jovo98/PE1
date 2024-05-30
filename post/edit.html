@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
     <title>Edit page</title>
     <script src="../js/edit.js" defer></script>
 </head>
 <header>
-    <a href="post_index.html"><button>Home</button></a>
-    <a href="make.html"><button>Create Post</button></a>
+    <div class="linkButtons">
+        <button class="away"><a href="post_index.html">Home</a></button>
+        <button class="away"><a href="make.html">Create Post</a></button>
+        <button class="home"><a href="edit.html">Edit Post</a></button>
+        <button class="away" onclick="window.localStorage.clear();"> <a href="../index.html">Sign Out</a></button>
+    </div>
 </header>
 <main>
+
 <section id="deletePost">
     <p class="descriptionTitle"> Delete a post</p>
     <form id="deleteForm" method="post">
@@ -27,6 +34,9 @@
         </div>
 
     </form>
+</section>
+
+    <section id="editPost">
     <p class="descriptionTitle"> Edit a post</p>
     <form id="putForm" method="post">
 
@@ -55,7 +65,7 @@
         </div>
 
     </form>
-</section>
+    </section>
 </main>
 <footer></footer>
 <body>

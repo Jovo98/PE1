@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
     <script src="../js/register.js" defer></script>
     <title>Register</title>
 </head>
 <body>
 <header>
-    <a href="../index.html"><button>
-        HOME
-    </button></a>
+    <div class="linkButtons">
+        <button class="away"><a href="../index.html">Home</a></button>
+        <button class="away"><a href="login.html">Log in</a></button>
+        <button class="home"><a href="register.html">Register</a></button>
+    </div>
 </header>
 <main>
+    <section>
     <h1>Register Account</h1>
     <form id="registerForm" method="post">
-
-
         <div class="container">
             <label for="username"><b>Username</b></label>
             <input id="username"  type="text" placeholder="Enter Username" name="uname">
@@ -30,16 +32,11 @@
             <button id="button" type="submit">
                 Register
             </button>
-
         </div>
-
-
     </form>
-
+    </section>
 </main>
 <footer>
-
 </footer>
-
 </body>
 </html>

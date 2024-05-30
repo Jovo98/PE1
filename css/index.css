@@ -8,13 +8,13 @@ header {
     top: 0;
     left: 0;
     position: fixed;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    font-family: Roboto, sans-serif;
+
     z-index: 1;
 }
 
 main {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 body {
     font-family: Roboto, sans-serif;
@@ -30,12 +30,34 @@ body {
     display: flex;
     flex-direction: row;
 }
+.linkButtons button {
+    font-size: 1rem;
+    border-style: none;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+.home {
+    background-color:#d8ccb4;
+}
+.home a {
+    color: black;
+}
+.away {
+    background-color: #c0a886;
+}
+.away:hover {
+    background-color: #dec29e;;
+}
+.away a {
+    color: black;
+}
 .linkButtons a {
-    margin-left: 1rem;
+    text-decoration: none;
 }
 
 .carousel {
-    border-radius: 8px;
+    border-radius: 2px;
     border: 1px solid #8A724F;
     display: flex;
     overflow: hidden;
@@ -43,6 +65,7 @@ body {
     max-width: 600px;
     margin: auto;
     text-align: center;
+    background-color: #c0a886;
 }
 .carouselItem {
     min-width: 100%;
@@ -60,6 +83,11 @@ body {
     padding: 5px 10px;
     margin: 0 5px;
     cursor: pointer;
+    background-color: #605443;
+    border: none;
+    border-radius: 4px;
+    font:inherit;
+    color: white;
 }
 .thumbnailGrid {
     display: grid;
@@ -68,7 +96,8 @@ body {
     padding: 1rem;
 }
 .thumbnail {
-    border-radius: 8px;
+    background-color: #c0a886;
+    border-radius: 2px;
     border: 1px solid #8A724F;
     padding: 10px;
     text-align: center;
@@ -81,4 +110,11 @@ body {
 .readMore {
     margin: 1rem;
     cursor: pointer;
+    background-color: #605443;
+    border: none;
+    border-radius: 4px;
+    font:inherit;
+    padding: 8px;
+    color: white;
 }
+

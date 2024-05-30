@@ -9,14 +9,16 @@
 </head>
 <body>
 <header>
-    <a href="../index.html"><button>
-    HOME
-    </button></a>
+    <div class="linkButtons">
+        <button class="away"><a href="../index.html">Home</a></button>
+        <button class="home"><a href="login.html">Log in</a></button>
+        <button class="away"><a href="register.html">Register</a></button>
+    </div>
 </header>
 <main>
+    <section id="loginPost">
+    <h1>Log in Account</h1>
     <form id="loginForm" method="post">
-
-
         <div class="container">
             <label for="username"><b>Email</b></label>
             <input id="username"  type="text" placeholder="Enter Email" name="uname" required>
@@ -27,17 +29,11 @@
             <button id="button" type="submit">
                 Login
             </button>
-
         </div>
-
-
     </form>
-
+    </section>
 </main>
 <footer>
-
 </footer>
-
-
 </body>
 </html>
