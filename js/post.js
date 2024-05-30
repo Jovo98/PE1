@@ -1,9 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const postId = params.get('postId');
 const apiUrl = `https://v2.api.noroff.dev/blog/posts/jo_tan_vo`;
-
-
-
 fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -27,7 +24,6 @@ fetch(apiUrl)
         console.error('Error fetching blog post:', error);
         document.getElementById('post').innerHTML = '<p>There was an error fetching the post.</p>';
     });
-
 document.getElementById("Home").addEventListener("click", () => {
     history.back();
 });

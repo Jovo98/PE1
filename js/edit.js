@@ -81,7 +81,6 @@ function editPutRequest() {
             alert("Successfully edited post!");
         })
 }
-
 button2.addEventListener("click", (e) => {
     e.preventDefault()
     editPutRequest();

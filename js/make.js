@@ -26,7 +26,6 @@ function makePostRequest() {
             alt: form.imageAlt.value
         };
     }
-
     fetch("https://v2.api.noroff.dev/blog/posts/jo_tan_vo", {
         method: "POST",
         headers: {
@@ -50,7 +49,6 @@ function makePostRequest() {
             alert("Image not valid");
         });
 }
-
 button.addEventListener("click", (e) => {
     e.preventDefault();
     makePostRequest();

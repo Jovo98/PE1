@@ -13,14 +13,6 @@ function makeRegisterRequest() {
         alert("Please fill in all fields");
         return;
     }
-
-    console.log("Attempting to make request to:", "https://v2.api.noroff.dev/auth/register");
-    console.log("Request body:", {
-        name: form.username.value,
-        email: form.email.value,
-        password: form.password.value,
-    });
-
     fetch("https://v2.api.noroff.dev/auth/register", {
         method: "POST",
         headers: {

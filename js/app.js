@@ -1,5 +1,4 @@
 const apiUrl = "https://v2.api.noroff.dev/blog/posts/jo_tan_vo"
-// Function to make a POST request
 function makePostRequest() {
     fetch("https://v2.api.noroff.dev/blog/posts/jo_tan_vo", {
         method: "POST",
