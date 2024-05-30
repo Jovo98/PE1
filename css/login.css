@@ -1,38 +1,92 @@
-form {
-    border: 3px solid #f1f1f1;
-}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
+* {
     box-sizing: border-box;
-}
 
-button {
-    background-color: #4604aa;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+}
+header {
+    background-color: #c0a886;
     width: 100%;
-}
+    top: 0;
+    left: 0;
+    position: fixed;
+    font-family: Roboto, sans-serif;
 
-button:hover {
-    opacity: 0.8;
+    z-index: 1;
 }
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+main {
+    margin-top: 6rem;
+}
+body {
+    font-family: Roboto, sans-serif;
+    background-color: #d8ccb4;
+}
+.linkButtons {
+    display: flex;
+    flex-direction: row;
+}
+.linkButtons button {
+    font-size: 1rem;
+    border-style: none;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+.home {
+    background-color:#d8ccb4;
+}
+.home a {
+    color: black;
+}
+.away {
+    background-color: #c0a886;
+}
+.away:hover {
+    background-color: #dec29e;;
+}
+.away a {
+    color: black;
+}
+.linkButtons a {
+    text-decoration: none;
 }
 
 .container {
-    padding: 16px;
+    display:flex;
+    flex-direction: column;
+    width: 25%;
+    font-size: 1rem;
+    background-color: #c0a886;
+    border-radius: 4px;
+    padding: 2rem;
+}
+.container label {
+    margin-bottom: 8px;
 }
 
+.container input {
+    padding: 8px;
+    margin-bottom: 1rem;
+}
+.container button {
+    background-color: #605443;
+    border: none;
+    border-radius: 4px;
+    font:inherit;
+    padding: 8px;
+    color: white;
+    cursor:pointer;
+}
+h1 {
+    margin-left: 2rem;
+}
+.descriptionTitle {
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+section {
+    margin-left: 5rem;
+}
 
+#post {
+    margin-left: 2rem;
+}

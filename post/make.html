@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/make.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
     <title>Create Post</title>
     <script src="../js/make.js" defer></script>
 
 </head>
 <body>
 <header>
-    <div>
-        <a href="post_index.html"><button>Home</button></a>
-
-        <a href="edit.html"><button>Edit Posts</button></a>
+    <div class="linkButtons">
+        <button class="away"><a href="post_index.html">Home</a></button>
+        <button class="home"><a href="make.html">New Post</a></button>
+        <button class="away"><a href="edit.html">Edit Post</a></button>
+        <button class="away" onclick="window.localStorage.clear();"> <a href="../index.html">Sign Out</a></button>
     </div>
-
-
-
-
 </header>
 <main>
     <section id="createPost">
-       <p class="descriptionTitle"> Create a new Post</p>
+       <p class="descriptionTitle"> Create a New Post</p>
     <form id="postForm" method="post">
 
         <div class="container">

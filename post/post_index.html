@@ -11,15 +11,14 @@
 <header>
 
     <div class="linkButtons">
-    <a href="make.html">Create New Posts</a>
-    <a href="edit.html">Edit Posts</a>
-    <a href="../index.html">
-        <button onclick="window.localStorage.clear();">Sign Out</button>
-    </a>
+        <button class="home"><a href="post_index.html">Home</a></button>
+        <button class="away"><a href="make.html">New Post</a></button>
+        <button class="away"><a href="edit.html">Edit Post</a></button>
+        <button class="away" onclick="window.localStorage.clear();"> <a href="../index.html">Sign Out</a></button>
     </div>
 </header>
 <main>
-
+    <h1 class="welcome">Welcome to BLOG POST</h1>
     <div id="carousel" class="carousel"></div>
     <div class="carouselNav">
         <button id="prev">Previous</button>
