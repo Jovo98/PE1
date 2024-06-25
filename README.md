@@ -29,20 +29,8 @@ The site allows you to create an account associated with noroff and make/edit po
 git clone https://github.com/Jovo98/PE1.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
 
 
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
 
 ## Contributing
 
